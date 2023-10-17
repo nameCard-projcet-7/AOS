@@ -60,10 +60,12 @@ class nameCard_Scan : Fragment() {
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
 
+        // 촬영을 했을 경우 비트맵으로 변환 후 이미지 뷰에 세팅
         if (requestCode == REQUEST_IMAGE_CAPTURE && resultCode == RESULT_OK) {
             val imageBitmap = data?.extras?.get("data") as? Bitmap
             nameCardScanImage.setImageBitmap(imageBitmap)
         }
+        // 갤러리에서 가져왔을 경우 이미지뷰에 세팅
         else if (requestCode == REQUEST_GALLERY_IMAGE && resultCode == RESULT_OK) {
             val imageUri = data?.data
             nameCardScanImage.setImageURI(imageUri)

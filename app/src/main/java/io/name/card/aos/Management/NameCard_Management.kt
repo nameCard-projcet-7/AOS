@@ -12,16 +12,15 @@ import io.name.card.aos.nameCardData
 
 class nameCard_Management : Fragment() {
 
-    private lateinit var namecardManagementAdapter: nameCard_Management_Adapter
-    private lateinit var nameCardRecyclerView: RecyclerView
+    private lateinit var nameCardManagementAdapter: nameCard_Management_Adapter // 리사이클러뷰 사용을 위한 어댑터
+    private lateinit var nameCardRecyclerView: RecyclerView // 리사이클러뷰
 
-    var nameCardData = mutableListOf<nameCardData>()
+    var nameCardData = mutableListOf<nameCardData>() // 데이터 클래스 가져오기
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-
         return inflater.inflate(R.layout.fragment_name_card__management, container, false)
     }
 
@@ -29,10 +28,11 @@ class nameCard_Management : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         nameCardRecyclerView = view.findViewById(R.id.recyclerView)
-        namecardManagementAdapter = nameCard_Management_Adapter(requireContext())
-        nameCardRecyclerView.adapter = namecardManagementAdapter
+        nameCardManagementAdapter = nameCard_Management_Adapter(requireContext())
+        nameCardRecyclerView.adapter = nameCardManagementAdapter
         nameCardRecyclerView.layoutManager = LinearLayoutManager(context)
 
+        // 더미 데이터 생성. API호출 시 삭제
         nameCardData.add(nameCardData(R.drawable.ic_launcher_foreground, "김범진", "동아대학교", "학부생", "010-5410-1476", "1923673@donga.ac.kr", "010-1234-5678", "010-8765-4321", "부산광역시 사하구 낙동대로 550번길 37"))
         nameCardData.add(nameCardData(R.drawable.ic_launcher_foreground, "김범진", "동아대학교", "학부생", "010-5410-1476", "1923673@donga.ac.kr", "010-1234-5678", "010-8765-4321", "부산광역시 사하구 낙동대로 550번길 37"))
         nameCardData.add(nameCardData(R.drawable.ic_launcher_foreground, "김범진", "동아대학교", "학부생", "010-5410-1476", "1923673@donga.ac.kr", "010-1234-5678", "010-8765-4321", "부산광역시 사하구 낙동대로 550번길 37"))
@@ -41,7 +41,7 @@ class nameCard_Management : Fragment() {
         nameCardData.add(nameCardData(R.drawable.ic_launcher_foreground, "김범진", "동아대학교", "학부생", "010-5410-1476", "1923673@donga.ac.kr", "010-1234-5678", "010-8765-4321", "부산광역시 사하구 낙동대로 550번길 37"))
         nameCardData.add(nameCardData(R.drawable.ic_launcher_foreground, "김범진", "동아대학교", "학부생", "010-5410-1476", "1923673@donga.ac.kr", "010-1234-5678", "010-8765-4321", "부산광역시 사하구 낙동대로 550번길 37"))
 
-        namecardManagementAdapter.setList(nameCardData)
+        nameCardManagementAdapter.setList(nameCardData)
     }
 
 }

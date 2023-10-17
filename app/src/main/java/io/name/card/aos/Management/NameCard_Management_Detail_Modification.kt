@@ -36,6 +36,7 @@ class nameCard_Management_Detail_Modification : AppCompatActivity() {
 
         val imageId = intent.getIntExtra("image", 0)
 
+        // 수정할 아이템들
         val updatedName = EditTvNameModification.text.toString()
         val updatedOffice = EditTvOfficeModification.text.toString()
         val updatedPosition = EditTvPositionModification.text.toString()
@@ -47,6 +48,7 @@ class nameCard_Management_Detail_Modification : AppCompatActivity() {
 
         val nameCardData = NameCardDataSource.nameCardDataList
 
+        // 수정한 데이터를 기존의 데이터 클래스에 덮어 씌우는 작업
         val updatedNameCardData = nameCardData(
             imageId,
             updatedName,

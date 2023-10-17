@@ -45,6 +45,8 @@ class nameCard_Management_Adapter(private val context: Context) :
             nameCardNumber.text = item.number
             Glide.with(itemView).load(item.image).into(nameCardImage)
 
+            // 리사이클러뷰의 아이템을 클릭 시 Detail로 넘어감
+            // 데이터들을 함께 보냄
             itemView.setOnClickListener {
                 val intent = Intent(context, nameCard_Management_Detail::class.java).apply {
                     putExtra("image", item.image)
