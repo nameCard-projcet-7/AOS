@@ -30,7 +30,6 @@
         </activity>
         <activity android:name=".Management.nameCard_Management_Detail"> </activity>
         <activity android:name=".Management.nameCard_Management_Detail_Modification"></activity>
-        <activity android:name=".CameraFragment"></activity>
     </application>
 
 </manifest>

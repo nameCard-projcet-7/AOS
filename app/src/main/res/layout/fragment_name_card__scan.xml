@@ -7,14 +7,31 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-    <Button
-        android:id="@+id/nameCardScan_Button"
-        android:layout_width="350dp"
-        android:layout_height="50dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
-        android:layout_marginBottom="20dp"
-        android:text="명함 스캔"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/nameCardScan_Button"
+            android:layout_width="175dp"
+            android:layout_height="50dp"
+            android:layout_gravity="left"
+            android:layout_marginLeft="20dp"
+            android:text="명함 스캔"/>
+
+        <Button
+            android:id="@+id/nameCardScan_Image_Button"
+            android:layout_width="175dp"
+            android:layout_height="50dp"
+            android:layout_gravity="left"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="20dp"
+            android:text="이미지 불러오기"/>
+
+
+    </LinearLayout>
 
     <ScrollView
         android:id="@+id/scrollView"
