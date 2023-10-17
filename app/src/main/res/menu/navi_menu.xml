@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/scan"
+        app:showAsAction="ifRoom"
+        android:title="명함 스캔"
+        android:enabled="true" />
+
+    <item
+        android:id="@+id/management"
+        app:showAsAction="ifRoom"
+        android:title="명함 관리"
+        android:enabled="true" />
+
+    <item
+        android:id="@+id/making"
+        app:showAsAction="ifRoom"
+        android:title="명함 제작"
+        android:enabled="true" />
+</menu>
