@@ -1,4 +1,4 @@
-package io.name.card.aos
+package io.name.card.aos.Data
 
 data class nameCardData(
     val image: Int,

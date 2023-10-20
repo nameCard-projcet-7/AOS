@@ -16,7 +16,6 @@ class nameCard_Management_Detail : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.namecard_management_item_detail)
 
-        var imageViewDetail: ImageView = findViewById(R.id.nameCard_detail_ImageView)
         var tvNameDetail: TextView = findViewById(R.id.nameCard_detail_name_Tv)
         var tvOfficeDetail: TextView = findViewById(R.id.nameCard_detail_office_Tv)
         var tvPositionDetail: TextView = findViewById(R.id.nameCard_detail_position_Tv)
@@ -36,7 +35,6 @@ class nameCard_Management_Detail : AppCompatActivity() {
         var fax = intent.getStringExtra("fax")
         var address = intent.getStringExtra("address")
 
-        imageViewDetail.setImageResource(image)
         tvNameDetail.text = name
         tvOfficeDetail.text = office
         tvPositionDetail.text = position

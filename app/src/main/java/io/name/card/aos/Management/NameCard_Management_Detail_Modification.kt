@@ -9,7 +9,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import io.name.card.aos.R
-import io.name.card.aos.nameCardData
+import io.name.card.aos.Data.nameCardData
 
 class nameCard_Management_Detail_Modification : AppCompatActivity() {
 

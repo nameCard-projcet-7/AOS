@@ -10,7 +10,7 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import io.name.card.aos.R
-import io.name.card.aos.nameCardData
+import io.name.card.aos.Data.nameCardData
 
 class nameCard_Management_Adapter(private val context: Context) :
     RecyclerView.Adapter<nameCard_Management_Adapter.ViewHolder>() {

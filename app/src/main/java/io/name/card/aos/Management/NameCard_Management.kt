@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import io.name.card.aos.R
-import io.name.card.aos.nameCardData
+import io.name.card.aos.Data.nameCardData
 
 class nameCard_Management : Fragment() {
 

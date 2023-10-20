@@ -1,88 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical">
 
-    <ImageView
-        android:id="@+id/nameCard_detail_ImageView"
-        android:layout_width="300dp"
-        android:layout_height="180dp"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="20dp"
-        android:src="@mipmap/ic_launcher" />
-
-    <ScrollView
-        android:layout_width="400dp"
-        android:layout_height="match_parent"
-        android:layout_marginTop="210dp">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="10dp"
-                    android:text="성함:"
-                    android:textColor="@color/black"
-                    android:textSize="30sp"/>
-
-                <TextView
-                    android:id="@+id/nameCard_detail_name_Tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:layout_marginRight="10dp"
-                    android:text="김범진"
-                    android:textColor="@color/black"
-                    android:textSize="30sp"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="10dp"
-                    android:text="직장:"
-                    android:textColor="@color/black"
-                    android:textSize="30sp"/>
-
-                <TextView
-                    android:id="@+id/nameCard_detail_office_Tv"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:layout_marginRight="10dp"
-                    android:text="동아대학교"
-                    android:textColor="@color/black"
-                    android:textSize="30sp"/>
-
-            </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -97,18 +24,18 @@
                 android:gravity="center"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="10dp"
-                android:text="직책:"
+                android:text="성함:"
                 android:textColor="@color/black"
                 android:textSize="30sp"/>
 
             <TextView
-                android:id="@+id/nameCard_detail_position_Tv"
+                android:id="@+id/nameCard_detail_name_Tv"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:layout_marginRight="10dp"
-                android:text="학부생"
+                android:text="김범진"
                 android:textColor="@color/black"
                 android:textSize="30sp"/>
 
@@ -127,146 +54,203 @@
                 android:gravity="center"
                 android:layout_marginLeft="5dp"
                 android:layout_marginRight="10dp"
-                android:text="전화번호:"
+                android:text="직장:"
                 android:textColor="@color/black"
                 android:textSize="30sp"/>
 
             <TextView
-                android:id="@+id/nameCard_detail_number_Tv"
+                android:id="@+id/nameCard_detail_office_Tv"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
                 android:layout_gravity="center"
                 android:gravity="center"
                 android:layout_marginRight="10dp"
-                android:text="010-1234-5678"
+                android:text="동아대학교"
                 android:textColor="@color/black"
                 android:textSize="30sp"/>
 
         </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="horizontal"
-            android:layout_marginBottom="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="10dp"
-                android:text="e-mail:"
-                android:textColor="@color/black"
-                android:textSize="30sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:text="직책:"
+            android:textColor="@color/black"
+            android:textSize="30sp"/>
 
-            <TextView
-                android:id="@+id/nameCard_detail_email_Tv"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_marginRight="5dp"
-                android:text="1923673@donga.ac.kr"
-                android:textColor="@color/black"
-                android:textSize="20sp"/>
+        <TextView
+            android:id="@+id/nameCard_detail_position_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginRight="10dp"
+            android:text="학부생"
+            android:textColor="@color/black"
+            android:textSize="30sp"/>
 
-        </LinearLayout>
+    </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="horizontal"
-            android:layout_marginBottom="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="10dp"
-                android:text="T:"
-                android:textColor="@color/black"
-                android:textSize="30sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:text="전화번호:"
+            android:textColor="@color/black"
+            android:textSize="30sp"/>
 
-            <TextView
-                android:id="@+id/nameCard_detail_telephone_Tv"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_marginRight="10dp"
-                android:text="054-1234-5678"
-                android:textColor="@color/black"
-                android:textSize="30sp"/>
+        <TextView
+            android:id="@+id/nameCard_detail_number_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginRight="10dp"
+            android:text="010-1234-5678"
+            android:textColor="@color/black"
+            android:textSize="30sp"/>
 
-        </LinearLayout>
+    </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="horizontal"
-            android:layout_marginBottom="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="10dp"
-                android:text="F:"
-                android:textColor="@color/black"
-                android:textSize="30sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:text="e-mail:"
+            android:textColor="@color/black"
+            android:textSize="30sp"/>
 
-            <TextView
-                android:id="@+id/nameCard_detail_fax_Tv"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_marginRight="10dp"
-                android:text="054-8765-4321"
-                android:textColor="@color/black"
-                android:textSize="30sp"/>
+        <TextView
+            android:id="@+id/nameCard_detail_email_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginRight="5dp"
+            android:text="1923673@donga.ac.kr"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
 
-        </LinearLayout>
+    </LinearLayout>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:orientation="horizontal"
-            android:layout_marginBottom="10dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_marginLeft="5dp"
-                android:layout_marginRight="10dp"
-                android:text="주소:"
-                android:textColor="@color/black"
-                android:textSize="30sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:text="T:"
+            android:textColor="@color/black"
+            android:textSize="30sp"/>
 
-            <TextView
-                android:id="@+id/nameCard_detail_address_Tv"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_gravity="center"
-                android:gravity="center"
-                android:layout_marginRight="5dp"
-                android:text="부산광역시 사하구 낙동대로 550번길 37"
-                android:textColor="@color/black"
-                android:textSize="17sp"/>
-        </LinearLayout>
+        <TextView
+            android:id="@+id/nameCard_detail_telephone_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginRight="10dp"
+            android:text="054-1234-5678"
+            android:textColor="@color/black"
+            android:textSize="30sp"/>
 
-        </LinearLayout>
+    </LinearLayout>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
 
-    </ScrollView>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:text="F:"
+            android:textColor="@color/black"
+            android:textSize="30sp"/>
+
+        <TextView
+            android:id="@+id/nameCard_detail_fax_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginRight="10dp"
+            android:text="054-8765-4321"
+            android:textColor="@color/black"
+            android:textSize="30sp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:text="주소:"
+            android:textColor="@color/black"
+            android:textSize="30sp"/>
+
+        <TextView
+            android:id="@+id/nameCard_detail_address_Tv"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_marginRight="5dp"
+            android:text="부산광역시 사하구 낙동대로 550번길 37"
+            android:textColor="@color/black"
+            android:textSize="17sp"/>
+    </LinearLayout>
+
+    </LinearLayout>
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/nameCardScan_modification_Floating"
@@ -274,7 +258,10 @@
         android:layout_height="50dp"
         android:layout_gravity="bottom|right"
         android:layout_marginBottom="20dp"
-        android:layout_marginRight="15dp"/>
+        android:layout_marginRight="15dp"
+        android:src="@drawable/modification"
+        android:scaleType="center"
+        app:backgroundTint="@android:color/transparent" />
 
 
 </FrameLayout>

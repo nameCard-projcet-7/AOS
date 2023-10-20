@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".Management.nameCard_Management">
 
     <!-- TODO: Update blank fragment layout -->
@@ -44,7 +45,7 @@
             android:layout_height="match_parent"
             android:layout_gravity="center"
             android:gravity="center"
-            android:text="명함"
+            android:text="이메일"
             android:textSize="25sp"
             android:textColor="@color/black"/>
 
@@ -64,6 +65,10 @@
         android:layout_height="50dp"
         android:layout_gravity="bottom|right"
         android:layout_marginBottom="20dp"
-        android:layout_marginRight="15dp" />
+        android:layout_marginRight="15dp"
+        android:src="@drawable/plus"
+        android:scaleType="center"
+        app:backgroundTint="@android:color/transparent" />
+
 
 </FrameLayout>
