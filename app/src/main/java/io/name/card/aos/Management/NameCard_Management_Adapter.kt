@@ -46,7 +46,6 @@ class nameCard_Management_Adapter(private val context: Context) :
             // 데이터들을 함께 보냄
             itemView.setOnClickListener {
                 val intent = Intent(context, nameCard_Management_Detail::class.java).apply {
-                    putExtra("image", item.image)
                     putExtra("name", item.name)
                     putExtra("office", item.office)
                     putExtra("position", item.position)

@@ -33,13 +33,13 @@ class nameCard_Management : Fragment() {
         nameCardRecyclerView.layoutManager = LinearLayoutManager(context)
 
         // 더미 데이터 생성. API호출 시 삭제
-        nameCardData.add(nameCardData(R.drawable.ic_launcher_foreground, "김범진", "동아대학교", "학부생", "010-5410-1476", "1923673@donga.ac.kr", "010-1234-5678", "010-8765-4321", "부산광역시 사하구 낙동대로 550번길 37"))
-        nameCardData.add(nameCardData(R.drawable.ic_launcher_foreground, "김범진", "동아대학교", "학부생", "010-5410-1476", "1923673@donga.ac.kr", "010-1234-5678", "010-8765-4321", "부산광역시 사하구 낙동대로 550번길 37"))
-        nameCardData.add(nameCardData(R.drawable.ic_launcher_foreground, "김범진", "동아대학교", "학부생", "010-5410-1476", "1923673@donga.ac.kr", "010-1234-5678", "010-8765-4321", "부산광역시 사하구 낙동대로 550번길 37"))
-        nameCardData.add(nameCardData(R.drawable.ic_launcher_foreground, "김범진", "동아대학교", "학부생", "010-5410-1476", "1923673@donga.ac.kr", "010-1234-5678", "010-8765-4321", "부산광역시 사하구 낙동대로 550번길 37"))
-        nameCardData.add(nameCardData(R.drawable.ic_launcher_foreground, "김범진", "동아대학교", "학부생", "010-5410-1476", "1923673@donga.ac.kr", "010-1234-5678", "010-8765-4321", "부산광역시 사하구 낙동대로 550번길 37"))
-        nameCardData.add(nameCardData(R.drawable.ic_launcher_foreground, "김범진", "동아대학교", "학부생", "010-5410-1476", "1923673@donga.ac.kr", "010-1234-5678", "010-8765-4321", "부산광역시 사하구 낙동대로 550번길 37"))
-        nameCardData.add(nameCardData(R.drawable.ic_launcher_foreground, "김범진", "동아대학교", "학부생", "010-5410-1476", "1923673@donga.ac.kr", "010-1234-5678", "010-8765-4321", "부산광역시 사하구 낙동대로 550번길 37"))
+        nameCardData.add(nameCardData( "김범진", "동아대학교", "학부생", "010-5410-1476", "1923673@donga.ac.kr", "010-1234-5678", "010-8765-4321", "부산광역시 사하구 낙동대로 550번길 37"))
+        nameCardData.add(nameCardData( "김범진", "동아대학교", "학부생", "010-5410-1476", "1923673@donga.ac.kr", "010-1234-5678", "010-8765-4321", "부산광역시 사하구 낙동대로 550번길 37"))
+        nameCardData.add(nameCardData("김범진", "동아대학교", "학부생", "010-5410-1476", "1923673@donga.ac.kr", "010-1234-5678", "010-8765-4321", "부산광역시 사하구 낙동대로 550번길 37"))
+        nameCardData.add(nameCardData("김범진", "동아대학교", "학부생", "010-5410-1476", "1923673@donga.ac.kr", "010-1234-5678", "010-8765-4321", "부산광역시 사하구 낙동대로 550번길 37"))
+        nameCardData.add(nameCardData("김범진", "동아대학교", "학부생", "010-5410-1476", "1923673@donga.ac.kr", "010-1234-5678", "010-8765-4321", "부산광역시 사하구 낙동대로 550번길 37"))
+        nameCardData.add(nameCardData("김범진", "동아대학교", "학부생", "010-5410-1476", "1923673@donga.ac.kr", "010-1234-5678", "010-8765-4321", "부산광역시 사하구 낙동대로 550번길 37"))
+        nameCardData.add(nameCardData("김범진", "동아대학교", "학부생", "010-5410-1476", "1923673@donga.ac.kr", "010-1234-5678", "010-8765-4321", "부산광역시 사하구 낙동대로 550번길 37"))
 
         nameCardManagementAdapter.setList(nameCardData)
     }
