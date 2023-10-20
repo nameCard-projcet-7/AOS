@@ -23,8 +23,6 @@ class nameCard_Management_Detail_Modification : AppCompatActivity() {
         setContentView(R.layout.namecard_management_item_detail_modification)
 
         val ButtonModification: Button = findViewById(R.id.nameCardScan_modification_Button)
-        val FrameLayoutImageModification: FrameLayout = findViewById(R.id.nameCard_modification_Framlayout)
-        val ImageViewModifiaction: ImageView = findViewById(R.id.nameCard_modification_Image)
         val EditTvNameModification: TextView = findViewById(R.id.nameCard_modification_name_Tv)
         val EditTvOfficeModification: TextView = findViewById(R.id.nameCard_modification_office_Tv)
         val EditTvPositionModification: TextView = findViewById(R.id.nameCard_modification_position_Tv)
@@ -33,8 +31,6 @@ class nameCard_Management_Detail_Modification : AppCompatActivity() {
         val EditTvTelephoneModification: TextView = findViewById(R.id.nameCard_modification_telephone_Tv)
         val EditTvFaxModification: TextView = findViewById(R.id.nameCard_modification_fax_Tv)
         val EditTvAddressModification: TextView = findViewById(R.id.nameCard_modification_address_Tv)
-
-        val imageId = intent.getIntExtra("image", 0)
 
         // 수정할 아이템들
         val updatedName = EditTvNameModification.text.toString()
@@ -50,7 +46,6 @@ class nameCard_Management_Detail_Modification : AppCompatActivity() {
 
         // 수정한 데이터를 기존의 데이터 클래스에 덮어 씌우는 작업
         val updatedNameCardData = nameCardData(
-            imageId,
             updatedName,
             updatedOffice,
             updatedPosition,
