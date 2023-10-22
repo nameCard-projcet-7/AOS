@@ -59,16 +59,5 @@
         android:layout_height="match_parent"
         android:layout_marginTop="45dp"/>
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/nameCardScan_Floating"
-        android:layout_width="50dp"
-        android:layout_height="50dp"
-        android:layout_gravity="bottom|right"
-        android:layout_marginBottom="20dp"
-        android:layout_marginRight="15dp"
-        android:src="@drawable/plus"
-        android:scaleType="center"
-        app:backgroundTint="@android:color/transparent" />
-
 
 </FrameLayout>

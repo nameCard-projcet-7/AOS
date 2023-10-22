@@ -11,7 +11,10 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:text="김범진"
-        android:textSize="20sp"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="20sp"
+        android:autoSizeStepGranularity="1sp"
         android:textColor="@color/black"
         android:textStyle="bold"/>
 
@@ -22,7 +25,10 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:text="동아대학교"
-        android:textSize="18sp"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeMaxTextSize="18sp"
+        android:autoSizeStepGranularity="1sp"
         android:textColor="@color/black"
         android:textStyle="bold"/>
 
@@ -33,7 +39,9 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:text="010-1234-5678"
-        android:textSize="15sp"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="10sp"
+        android:autoSizeMaxTextSize="15sp"
         android:textColor="@color/black"
         android:textStyle="bold"/>
 
@@ -44,7 +52,9 @@
         android:layout_gravity="center"
         android:gravity="center"
         android:text="enffl68953@naver.com"
-        android:textSize="12sp"
+        android:autoSizeTextType="uniform"
+        android:autoSizeMinTextSize="8sp"
+        android:autoSizeMaxTextSize="12sp"
         android:textColor="@color/black"
         android:textStyle="bold" />
 

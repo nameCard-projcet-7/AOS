@@ -3,6 +3,7 @@ package io.name.card.aos.Management
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -24,6 +25,7 @@ class nameCard_Management_Detail : AppCompatActivity() {
         var tvTelephoneDetail: TextView = findViewById(R.id.nameCard_detail_telephone_Tv)
         var tvFaxDetail: TextView = findViewById(R.id.nameCard_detail_fax_Tv)
         var tvAddressDetail: TextView = findViewById(R.id.nameCard_detail_address_Tv)
+        var buttonShare: Button = findViewById(R.id.nameCard_detail_share_Button)
 
         var image = intent.getIntExtra("image", 0)
         var name = intent.getStringExtra("name")
@@ -43,6 +45,10 @@ class nameCard_Management_Detail : AppCompatActivity() {
         tvTelephoneDetail.text = telephone
         tvFaxDetail.text = fax
         tvAddressDetail.text = address
+
+        buttonShare.setOnClickListener {
+            
+        }
 
         var fab: FloatingActionButton = findViewById(R.id.nameCardScan_modification_Floating)
         fab.setOnClickListener {
