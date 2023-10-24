@@ -6,7 +6,5 @@ data class nameCardData(
     val position: String,
     val number: String,
     val email:String,
-    val telephone: String,
-    val fax: String,
     val address: String
 )

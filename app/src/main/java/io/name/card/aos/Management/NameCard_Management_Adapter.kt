@@ -51,8 +51,6 @@ class nameCard_Management_Adapter(private val context: Context) :
                     putExtra("position", item.position)
                     putExtra("number", item.number)
                     putExtra("email", item.email)
-                    putExtra("telephone", item.telephone)
-                    putExtra("fax", item.fax)
                     putExtra("address", item.address)
                 }
                 context.startActivity(intent)

@@ -28,8 +28,6 @@ class nameCard_Management_Detail_Modification : AppCompatActivity() {
         val EditTvPositionModification: TextView = findViewById(R.id.nameCard_modification_position_Tv)
         val EditTvNumberModification: TextView = findViewById(R.id.nameCard_modification_number_Tv)
         val EditTvEmailModification: TextView = findViewById(R.id.nameCard_modification_email_Tv)
-        val EditTvTelephoneModification: TextView = findViewById(R.id.nameCard_modification_telephone_Tv)
-        val EditTvFaxModification: TextView = findViewById(R.id.nameCard_modification_fax_Tv)
         val EditTvAddressModification: TextView = findViewById(R.id.nameCard_modification_address_Tv)
 
         // 수정할 아이템들
@@ -38,8 +36,6 @@ class nameCard_Management_Detail_Modification : AppCompatActivity() {
         val updatedPosition = EditTvPositionModification.text.toString()
         val updatedNumber = EditTvNumberModification.text.toString()
         val updatedEmail = EditTvEmailModification.text.toString()
-        val updatedTelephone = EditTvTelephoneModification.text.toString()
-        val updatedFax= EditTvFaxModification.text.toString()
         val updatedAddress= EditTvAddressModification.text.toString()
 
         val nameCardData = NameCardDataSource.nameCardDataList
@@ -51,8 +47,6 @@ class nameCard_Management_Detail_Modification : AppCompatActivity() {
             updatedPosition,
             updatedNumber,
             updatedEmail,
-            updatedTelephone,
-            updatedFax,
             updatedAddress
         )
 
@@ -67,8 +61,6 @@ class nameCard_Management_Detail_Modification : AppCompatActivity() {
             Log.d("UpdatedData", "Updated Position: $updatedPosition")
             Log.d("UpdatedData", "Updated Number: $updatedNumber")
             Log.d("UpdatedData", "Updated Email: $updatedEmail")
-            Log.d("UpdatedData", "Updated Telephone: $updatedTelephone")
-            Log.d("UpdatedData", "Updated Fax: $updatedFax")
             Log.d("UpdatedData", "Updated Address: $updatedAddress")
 
             finish()

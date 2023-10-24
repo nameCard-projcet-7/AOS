@@ -90,6 +90,7 @@
                     android:textSize="30sp"/>
 
                 <TextView
+                    android:id="@+id/scanName_Tv"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
@@ -119,6 +120,7 @@
                     android:textSize="30sp"/>
 
                 <TextView
+                    android:id="@+id/scanOffice_Tv"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
@@ -148,6 +150,7 @@
                     android:textSize="30sp"/>
 
                 <TextView
+                    android:id="@+id/scanPosition_Tv"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
@@ -177,6 +180,7 @@
                     android:textSize="30sp"/>
 
                 <TextView
+                    android:id="@+id/scanNumber_Tv"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
@@ -206,6 +210,7 @@
                     android:textSize="30sp"/>
 
                 <TextView
+                    android:id="@+id/scanEmail_Tv"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
@@ -230,69 +235,12 @@
                     android:gravity="center"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="10dp"
-                    android:text="T:"
-                    android:textColor="@color/black"
-                    android:textSize="30sp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:layout_marginRight="10dp"
-                    android:text="054-1234-5678"
-                    android:textColor="@color/black"
-                    android:textSize="30sp"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="10dp"
-                    android:text="F:"
-                    android:textColor="@color/black"
-                    android:textSize="30sp"/>
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:layout_marginRight="10dp"
-                    android:text="054-8765-4321"
-                    android:textColor="@color/black"
-                    android:textSize="30sp"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="50dp"
-                android:orientation="horizontal"
-                android:layout_marginBottom="10dp">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_gravity="center"
-                    android:gravity="center"
-                    android:layout_marginLeft="5dp"
-                    android:layout_marginRight="10dp"
                     android:text="주소:"
                     android:textColor="@color/black"
                     android:textSize="30sp"/>
 
                 <TextView
+                    android:id="@+id/scanAddress_Tv"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
