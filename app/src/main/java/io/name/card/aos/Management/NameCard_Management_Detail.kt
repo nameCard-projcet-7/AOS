@@ -25,7 +25,7 @@ class nameCard_Management_Detail : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.namecard_management_item_detail)
 
-        /// 페어링된 기기 목록을 클래스 내에서 바로 얻을 수 있습니다.
+        /*/// 페어링된 기기 목록을 클래스 내에서 바로 얻을 수 있습니다.
         val pairedDevices: Set<BluetoothDevice>? = bluetoothAdapter?.bondedDevices
 
         // 블루투스 지원 여부 확인
@@ -42,7 +42,7 @@ class nameCard_Management_Detail : AppCompatActivity() {
                     // 사용자가 블루투스 활성화를 거부했을 경우 처리
                 }
             }.launch(enableBtIntent)
-        }
+        }*/
 
 
 
@@ -69,7 +69,7 @@ class nameCard_Management_Detail : AppCompatActivity() {
         tvEmailDetail.text = email
         tvAddressDetail.text = address
 
-        buttonShare.setOnClickListener {
+        /*buttonShare.setOnClickListener {
             // 선택된 블루투스 기기와 연결을 시도
             val device: BluetoothDevice = pairedDevices?.firstOrNull() ?: return@setOnClickListener
 
@@ -83,28 +83,7 @@ class nameCard_Management_Detail : AppCompatActivity() {
             } catch (e: Exception) {
                 // 연결 또는 데이터 전송 중 오류 발생
             }
-        }
-
-
-        var fab: FloatingActionButton = findViewById(R.id.nameCardScan_modification_Floating)
-        fab.setOnClickListener {
-            var intent = Intent(this, nameCard_Management_Detail_Modification::class.java).apply {
-                putExtra("image", image)
-                putExtra("name", name)
-                putExtra("office", office)
-                putExtra("position", position)
-                putExtra("number", number)
-                putExtra("email", email)
-                putExtra("address", address)
-            }
-            startActivity(intent)
-        }
+        }*/
     }
 
-    override fun onResume() {
-        super.onResume()
-        // Refresh data and UI here
-        val updatedNameCardData = nameCard_Management_Detail_Modification.NameCardDataSource.nameCardDataList.find { it.name == intent.getStringExtra("name") }
-        // Update UI using updatedNameCardData
-    }
 }

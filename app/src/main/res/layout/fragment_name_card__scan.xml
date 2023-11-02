@@ -1,43 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Scan.nameCard_Scan">
+    android:orientation="vertical"
+    tools:context=".Scan.nameCard_Scan"
+    android:background="@color/gray">
 
     <!-- TODO: Update blank fragment layout -->
 
     <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        android:orientation="horizontal">
+        android:layout_width="380dp"
+        android:layout_height="80dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:paddingLeft="7dp"
+        android:paddingRight="7dp"
+        android:background="@drawable/rounded_corners">
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/nameCardScan_Button"
             android:layout_width="175dp"
             android:layout_height="50dp"
-            android:layout_gravity="left"
-            android:layout_marginLeft="20dp"
-            android:text="명함 스캔"/>
+            android:layout_marginTop="15dp"
+            android:background="@drawable/rounded_coners_button"
+            android:text="명함 스캔"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/white"/>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/nameCardScan_Image_Button"
             android:layout_width="175dp"
             android:layout_height="50dp"
-            android:layout_gravity="left"
-            android:layout_marginTop="20dp"
-            android:layout_marginBottom="20dp"
-            android:layout_marginLeft="20dp"
-            android:text="이미지 불러오기"/>
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="16dp"
+            android:background="@drawable/rounded_coners_button"
+            android:text="이미지 불러오기"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="@color/white"/>
 
 
     </LinearLayout>
 
     <ScrollView
         android:id="@+id/scrollView"
-        android:layout_width="match_parent"
+        android:layout_width="400dp"
         android:layout_height="match_parent"
-        android:layout_marginTop="80dp">
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rounded_coners_scroll">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -49,7 +63,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="150dp"
                 android:orientation="horizontal"
-                android:layout_marginBottom="10dp">
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_corners">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -76,7 +91,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:orientation="horizontal"
-                android:layout_marginBottom="10dp">
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_corners">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -106,7 +122,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:orientation="horizontal"
-                android:layout_marginBottom="10dp">
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_corners">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -136,7 +153,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:orientation="horizontal"
-                android:layout_marginBottom="10dp">
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_corners">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -166,7 +184,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:orientation="horizontal"
-                android:layout_marginBottom="10dp">
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_corners">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -196,7 +215,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:orientation="horizontal"
-                android:layout_marginBottom="10dp">
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_corners">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -226,7 +246,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:orientation="horizontal"
-                android:layout_marginBottom="10dp">
+                android:layout_marginBottom="10dp"
+                android:background="@drawable/rounded_corners">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -252,14 +273,19 @@
 
             </LinearLayout>
 
-            <Button
+            <androidx.appcompat.widget.AppCompatButton
                 android:id="@+id/check_Button"
                 android:layout_width="350dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center"
-                android:text="확인"/>
+                android:layout_marginTop="20dp"
+                android:background="@drawable/rounded_coners_button"
+                android:text="추가하기"
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:textColor="@color/white"/>
         </LinearLayout>
 
     </ScrollView>
 
-</FrameLayout>
+</LinearLayout>

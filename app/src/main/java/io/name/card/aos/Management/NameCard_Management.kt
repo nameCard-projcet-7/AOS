@@ -32,6 +32,7 @@ class nameCard_Management : Fragment() {
         nameCardManagementAdapter = nameCard_Management_Adapter(requireContext())
         nameCardRecyclerView.adapter = nameCardManagementAdapter
         nameCardRecyclerView.layoutManager = LinearLayoutManager(context)
+        nameCardRecyclerView.addItemDecoration(VerticalItemDecorator(10))
 
         // 더미 데이터 생성. API호출 시 삭제
         nameCardData.add(nameCardData("김범진", "동아대학교", "학부생", "010-5410-1476", "1923673@donga.ac.kr", "부산광역시 사하구 낙동대로 550번길 37"))
