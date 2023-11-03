@@ -280,7 +280,7 @@
                 android:layout_gravity="center"
                 android:layout_marginTop="20dp"
                 android:background="@drawable/rounded_coners_button"
-                android:text="추가하기"
+                android:text="등록하기"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 android:textColor="@color/white"/>

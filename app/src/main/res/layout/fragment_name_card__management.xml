@@ -13,7 +13,7 @@
         android:orientation="horizontal"
         android:layout_gravity="center"
         android:layout_marginTop="10dp"
-        android:background="@drawable/rounded_corners">
+        android:background="@drawable/rounded_corners_recy">
 
         <TextView
             android:layout_width="0dp"
@@ -22,11 +22,12 @@
             android:gravity="center"
             android:text="성함"
             android:textSize="20sp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/white"/>
 
         <View
             android:layout_width="1dp"
-            android:layout_height="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
             android:background="@color/black"/>
 
         <TextView
@@ -36,11 +37,12 @@
             android:gravity="center"
             android:text="직장"
             android:textSize="20sp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/white"/>
 
         <View
             android:layout_width="1dp"
-            android:layout_height="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
             android:background="@color/black"/>
 
         <TextView
@@ -50,11 +52,12 @@
             android:gravity="center"
             android:text="전화번호"
             android:textSize="20sp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/white"/>
 
         <View
             android:layout_width="1dp"
-            android:layout_height="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
             android:background="@color/black"/>
 
         <TextView
@@ -64,7 +67,7 @@
             android:gravity="center"
             android:text="이메일"
             android:textSize="20sp"
-            android:textColor="@color/black"/>
+            android:textColor="@color/white"/>
     </LinearLayout>
 
 
