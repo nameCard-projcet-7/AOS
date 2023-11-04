@@ -4,6 +4,7 @@
     android:layout_height="240dp">
     
     <ImageView
+        android:id="@+id/nameCard_making_image"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@mipmap/ic_launcher"/>
