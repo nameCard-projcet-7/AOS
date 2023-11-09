@@ -9,12 +9,12 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import io.name.card.aos.R
-import io.name.card.aos.Data.nameCardData
+import io.name.card.aos.Data.NameCardData
 
-class nameCard_Management_Detail_Modification : AppCompatActivity() {
+class NameCard_Management_Detail_Modification : AppCompatActivity() {
 
     object NameCardDataSource {
-        var nameCardDataList = mutableListOf<nameCardData>()
+        var nameCardDataList = mutableListOf<NameCardData>()
     }
 
     @SuppressLint("MissingInflatedId")
@@ -41,7 +41,7 @@ class nameCard_Management_Detail_Modification : AppCompatActivity() {
         val nameCardData = NameCardDataSource.nameCardDataList
 
         // 수정한 데이터를 기존의 데이터 클래스에 덮어 씌우는 작업
-        val updatedNameCardData = nameCardData(
+        val updatedNameCardData = NameCardData(
             updatedName,
             updatedOffice,
             updatedPosition,

@@ -4,15 +4,15 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
-import io.name.card.aos.Making.nameCard_Making
-import io.name.card.aos.Management.nameCard_Management
-import io.name.card.aos.Scan.nameCard_Scan
+import io.name.card.aos.Making.NameCard_Making
+import io.name.card.aos.Management.NameCard_Management
+import io.name.card.aos.Scan.NameCard_Scan
 
 class MainActivity : AppCompatActivity() {
 
-    private val namecardScan = nameCard_Scan()
-    private val namecardManagement = nameCard_Management()
-    private val namecardMaking = nameCard_Making()
+    private val namecardScan = NameCard_Scan()
+    private val namecardManagement = NameCard_Management()
+    private val namecardMaking = NameCard_Making()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

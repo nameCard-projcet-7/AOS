@@ -9,6 +9,7 @@
         android:id="@+id/nameCard_making_image_choose"
         android:layout_width="380dp"
         android:layout_height="175dp"
+        android:orientation="horizontal"
         android:layout_marginTop="20dp"
         android:layout_gravity="center_horizontal"/>
 

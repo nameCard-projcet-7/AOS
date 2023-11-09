@@ -16,7 +16,7 @@ import io.name.card.aos.R
 import java.io.OutputStream
 import java.util.UUID
 
-class nameCard_Management_Detail : AppCompatActivity() {
+class NameCard_Management_Detail : AppCompatActivity() {
     // 블루투스 어댑터 초기화
     val bluetoothAdapter: BluetoothAdapter? = BluetoothAdapter.getDefaultAdapter()
 

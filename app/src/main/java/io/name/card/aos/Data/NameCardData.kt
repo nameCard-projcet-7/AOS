@@ -1,6 +1,6 @@
 package io.name.card.aos.Data
 
-data class nameCardData(
+data class NameCardData(
     val name: String,
     val office: String,
     val position: String,

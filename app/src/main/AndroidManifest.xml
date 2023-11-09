@@ -36,8 +36,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".Management.nameCard_Management_Detail"> </activity>
-        <activity android:name=".Management.nameCard_Management_Detail_Modification"></activity>
+        <activity android:name=".Management.NameCard_Management_Detail"> </activity>
+        <activity android:name=".Management.NameCard_Management_Detail_Modification"></activity>
+        <activity android:name=".Making.NameCard_Making_Page"></activity>
     </application>
 
 </manifest>

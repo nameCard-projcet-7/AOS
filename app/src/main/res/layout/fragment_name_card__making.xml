@@ -1,31 +1,37 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/gray"
-    tools:context=".Making.nameCard_Making">
+    tools:context=".Making.NameCard_Making">
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/nameCard_making_Button"
         android:layout_width="200dp"
         android:layout_height="50dp"
-        android:layout_gravity="center_horizontal"
         android:layout_marginTop="25dp"
         android:background="@drawable/rounded_coners_button"
         android:text="명함 제작하기"
         android:textColor="@color/white"
         android:textSize="18sp"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.5" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView_making"
-        android:layout_width="400dp"
-        android:layout_height="match_parent"
-        android:layout_gravity="center"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_marginTop="20dp"
-        android:background="@color/gray"/>
+        android:background="@color/gray"
+        app:layout_constraintTop_toBottomOf="@id/nameCard_making_Button"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.5" />
 
-
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

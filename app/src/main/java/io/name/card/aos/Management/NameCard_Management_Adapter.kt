@@ -10,12 +10,12 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import io.name.card.aos.R
-import io.name.card.aos.Data.nameCardData
+import io.name.card.aos.Data.NameCardData
 
-class nameCard_Management_Adapter(private val context: Context) :
-    RecyclerView.Adapter<nameCard_Management_Adapter.ViewHolder>() {
+class NameCard_Management_Adapter(private val context: Context) :
+    RecyclerView.Adapter<NameCard_Management_Adapter.ViewHolder>() {
 
-    var nameCardData = nameCard_Management_Detail_Modification.NameCardDataSource.nameCardDataList
+    var nameCardData = NameCard_Management_Detail_Modification.NameCardDataSource.nameCardDataList
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.namecard_managemnt_item, parent, false)
@@ -28,7 +28,7 @@ class nameCard_Management_Adapter(private val context: Context) :
         holder.bind(nameCardData[position])
     }
 
-    fun setList(nameData: MutableList<nameCardData>) {
+    fun setList(nameData: MutableList<NameCardData>) {
         nameCardData = nameData
     }
 
@@ -37,7 +37,7 @@ class nameCard_Management_Adapter(private val context: Context) :
         private val nameCardOffice: TextView = itemView.findViewById(R.id.nameCardOffice_Tv)
         private val nameCardNumber: TextView = itemView.findViewById(R.id.nameCardNumber_Tv)
 
-        fun bind(item: nameCardData) {
+        fun bind(item: NameCardData) {
             nameCardName.text = item.name
             nameCardOffice.text = item.office
             nameCardNumber.text = item.number
@@ -45,7 +45,7 @@ class nameCard_Management_Adapter(private val context: Context) :
             // 리사이클러뷰의 아이템을 클릭 시 Detail로 넘어감
             // 데이터들을 함께 보냄
             itemView.setOnClickListener {
-                val intent = Intent(context, nameCard_Management_Detail::class.java).apply {
+                val intent = Intent(context, NameCard_Management_Detail::class.java).apply {
                     putExtra("name", item.name)
                     putExtra("office", item.office)
                     putExtra("position", item.position)

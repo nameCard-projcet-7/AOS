@@ -13,7 +13,7 @@ import android.widget.ImageView
 import androidx.fragment.app.Fragment
 import io.name.card.aos.R
 
-class nameCard_Scan : Fragment() {
+class NameCard_Scan : Fragment() {
     private val REQUEST_IMAGE_CAPTURE = 1 // 사진 촬영
     private val REQUEST_GALLERY_IMAGE = 2 // 갤러리 불러오기
     private lateinit var nameCardScanImage: ImageView
