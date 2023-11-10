@@ -36,11 +36,13 @@ class NameCard_Management_Adapter(private val context: Context) :
         private val nameCardName: TextView = itemView.findViewById(R.id.nameCardName_Tv)
         private val nameCardOffice: TextView = itemView.findViewById(R.id.nameCardOffice_Tv)
         private val nameCardNumber: TextView = itemView.findViewById(R.id.nameCardNumber_Tv)
+        private val nameCardEmail: TextView = itemView.findViewById(R.id.nameCardEmail_Tv)
 
         fun bind(item: NameCardData) {
             nameCardName.text = item.name
             nameCardOffice.text = item.office
             nameCardNumber.text = item.number
+            nameCardEmail.text = item.email
 
             // 리사이클러뷰의 아이템을 클릭 시 Detail로 넘어감
             // 데이터들을 함께 보냄

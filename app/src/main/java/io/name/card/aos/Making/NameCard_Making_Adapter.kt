@@ -34,7 +34,7 @@ class NameCard_Making_Adapter(private val context: Context) :
     }
 
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        private val making_nameCardImage: ImageView = itemView.findViewById(R.id.nameCard_making_image)
+        private val making_nameCardImage: ImageView = itemView.findViewById(R.id.nameCard_image_item)
 
         fun bind(item: NameCardImage) {
             Glide.with(itemView).load(item.image).into(making_nameCardImage)

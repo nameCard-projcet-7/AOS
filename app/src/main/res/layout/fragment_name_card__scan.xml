@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Scan.nameCard_Scan"
+    tools:context=".Scan.NameCard_Scan"
     android:background="@color/gray">
 
     <!-- TODO: Update blank fragment layout -->

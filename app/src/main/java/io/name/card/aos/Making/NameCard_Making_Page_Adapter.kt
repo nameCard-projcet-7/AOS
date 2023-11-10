@@ -14,7 +14,7 @@ import io.name.card.aos.R
 import io.name.card.aos.Data.NameCardData
 import io.name.card.aos.Data.NameCardMakingImage
 
-class NameCard_Making_Page_Adapter(private val context: Context) :
+class NameCard_Making_Page_Adapter(private val context: Context, private val onImageClicked: (Int) -> Unit) :
     RecyclerView.Adapter<NameCard_Making_Page_Adapter.ViewHolder>() {
 
     var nameCardMakingImageData = mutableListOf<NameCardMakingImage>()
@@ -30,11 +30,20 @@ class NameCard_Making_Page_Adapter(private val context: Context) :
         holder.bind(nameCardMakingImageData[position])
     }
 
+    fun setList(image: MutableList<NameCardMakingImage>) {
+        nameCardMakingImageData = image
+    }
+
     inner class ViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        private val making_nameCardImage: ImageView = itemView.findViewById(R.id.nameCard_making_image)
+        private val making_nameCardImage: ImageView = itemView.findViewById(R.id.nameCard_making_image_item)
 
         fun bind(item: NameCardMakingImage) {
             Glide.with(itemView).load(item.making_image).into(making_nameCardImage)
+
+            itemView.setOnClickListener {
+                // 클릭한 이미지의 위치를 콜백을 통해 전달
+                onImageClicked(item.making_image)
+            }
         }
     }
 
