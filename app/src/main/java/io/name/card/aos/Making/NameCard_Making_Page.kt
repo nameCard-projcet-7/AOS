@@ -2,17 +2,16 @@ package io.name.card.aos.Making
 
 import android.content.ClipData
 import android.content.ClipDescription
-import android.os.Build
+import android.content.ContentValues.TAG
 import android.os.Bundle
+import android.util.Log
 import android.view.DragEvent
-import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup
 import android.widget.EditText
 import android.widget.ImageView
-import android.widget.RelativeLayout
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.ContentProviderCompat.requireContext
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
@@ -29,58 +28,14 @@ class NameCard_Making_Page : AppCompatActivity() {
 
     var nameCardMakingImageData = mutableListOf<NameCardMakingImage>()
 
+    companion object {
+        private const val NAME_TAG = "NAME_TAG"
+        // 다른 EditText 태그를 위한 상수도 이곳에 추가할 수 있습니다.
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.namecard_making)
-
-        val touchListener = View.OnTouchListener { view, event ->
-            if (event.action == MotionEvent.ACTION_DOWN) {
-                val clipText = "This is our ClipData text" // 실제로는 드래그하는 데이터를 여기에 넣음
-                val item = ClipData.Item(clipText)
-                val mimeTypes = arrayOf(ClipDescription.MIMETYPE_TEXT_PLAIN)
-                val dragData = ClipData(clipText, mimeTypes, item)
-                val dragShadowBuilder = View.DragShadowBuilder(view)
-
-                // startDragAndDrop() 메소드를 사용. FLAG_NULL을 통해 어떠한 플래그도 설정안함.
-                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.N) {
-                    view.startDragAndDrop(dragData, dragShadowBuilder, view, 0)
-                } else {
-                    view.startDrag(dragData, dragShadowBuilder, view, 0)
-                }
-                view.visibility = View.INVISIBLE // 드래그하는 동안 뷰를 보이지 않게 설정합니다.
-                true
-            } else {
-                false
-            }
-        }
-
-        val dragListener = View.OnDragListener { v, event ->
-            when (event.action) {
-                DragEvent.ACTION_DROP -> {
-                    val view = event.localState as View
-                    val owner = view.parent as ViewGroup
-                    owner.removeView(view)
-                    val container = v as RelativeLayout
-
-                    val x = event.x - view.width / 2
-                    val y = event.y - view.height / 2
-
-                    // 뷰의 위치를 업데이트합니다.
-                    view.x = x
-                    view.y = y
-                    container.addView(view)
-                    view.visibility = View.VISIBLE
-                    true
-                }
-                DragEvent.ACTION_DRAG_ENDED -> {
-                    // 드래그가 끝났을 때 뷰를 다시 보이게 합니다.
-                    val view = event.localState as View
-                    view.visibility = View.VISIBLE
-                    true
-                }
-                else -> true
-            }
-        }
 
         // 에딧 텍스트 뷰
         val Et_name: EditText = findViewById(R.id.nameCard_making_Et_name)
@@ -89,17 +44,54 @@ class NameCard_Making_Page : AppCompatActivity() {
         val Et_phone: EditText = findViewById(R.id.nameCard_making_Et_phone)
         val Et_email: EditText = findViewById(R.id.nameCard_making_Et_email)
         val Et_address: EditText = findViewById(R.id.nameCard_making_Et_address)
+        val nameCardMakingLayout: ConstraintLayout = findViewById(R.id.constraint)
 
+        Et_name.apply{
+            tag = NAME_TAG
+            setOnClickListener {v: View ->
+                val dragData = ClipData(
+                    v.tag as? CharSequence,
+                    arrayOf(ClipDescription.MIMETYPE_TEXT_PLAIN),
+                    ClipData.Item(v.tag as? CharSequence)
+                )
+                val myShadow = View.DragShadowBuilder(v)
 
-        Et_name.setOnTouchListener(touchListener)
-        Et_office.setOnTouchListener(touchListener)
-        Et_position.setOnTouchListener(touchListener)
-        Et_phone.setOnTouchListener(touchListener)
-        Et_email.setOnTouchListener(touchListener)
-        Et_address.setOnTouchListener(touchListener)
+                v.startDragAndDrop(dragData, myShadow, v, 0)
+            }
+        }
 
-        val nameCardMakingLayout: RelativeLayout = findViewById(R.id.relativeLayout)
-        nameCardMakingLayout.setOnDragListener(dragListener)
+        val dragListen = View.OnDragListener {v, event ->
+            when(event.action) {
+                DragEvent.ACTION_DRAG_STARTED -> {
+                    event.clipDescription.hasMimeType((ClipDescription.MIMETYPE_TEXT_PLAIN))
+                }
+                DragEvent.ACTION_DRAG_ENDED -> true
+                DragEvent.ACTION_DRAG_LOCATION -> true
+                DragEvent.ACTION_DRAG_EXITED -> true
+                DragEvent.ACTION_DROP -> {
+                    when (v) {
+                        nameCardMakingLayout -> {
+                            val tView = event.localState as View
+                            ((tView) as ViewGroup).removeView(tView)
+                            nameCardMakingLayout.addView(tView)
+                            true
+                        }
+                        else -> {
+                            false
+                        }
+                    }
+                }
+                DragEvent.ACTION_DRAG_ENDED -> {
+                    when(event.result) {
+                        true -> Log.d(TAG, "Good")
+                        else -> Log.d(TAG, "BAD")
+                    }
+                    true
+                }
+                else -> false
+            }
+        }
+        nameCardMakingLayout.setOnDragListener(dragListen)
 
         nameCardMakingImageView = findViewById(R.id.nameCard_making_image_make)
 
@@ -115,10 +107,16 @@ class NameCard_Making_Page : AppCompatActivity() {
         nameCard_Making_Image_Choose.layoutManager = LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)
 
         nameCardMakingImageData.apply {
-            add(NameCardMakingImage(making_image = R.mipmap.ic_launcher))
-            add(NameCardMakingImage(making_image = R.mipmap.ic_launcher))
-            add(NameCardMakingImage(making_image = R.mipmap.ic_launcher))
-            add(NameCardMakingImage(making_image = R.mipmap.ic_launcher))
+            add(NameCardMakingImage(making_image = R.drawable.namecard_1))
+            add(NameCardMakingImage(making_image = R.drawable.namecard_2))
+            add(NameCardMakingImage(making_image = R.drawable.namecard_3))
+            add(NameCardMakingImage(making_image = R.drawable.namecard_4))
+            add(NameCardMakingImage(making_image = R.drawable.namecard_5))
+            add(NameCardMakingImage(making_image = R.drawable.namecard_6))
+            add(NameCardMakingImage(making_image = R.drawable.namecard_7))
+            add(NameCardMakingImage(making_image = R.drawable.namecard_8))
+            add(NameCardMakingImage(making_image = R.drawable.namecard_9))
+            add(NameCardMakingImage(making_image = R.drawable.namecard_10))
         }
 
         nameCard_Making_Page_Adapter.setList(nameCardMakingImageData)

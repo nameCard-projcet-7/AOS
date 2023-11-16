@@ -51,7 +51,7 @@ class NameCard_Management_Detail_Modification : AppCompatActivity() {
         )
 
         ButtonModification.setOnClickListener {
-            val index = nameCardData.indexOfFirst { it.name == updatedName }
+            val index = nameCardData.indexOfFirst { it.Name == updatedName }
             if(index != -1) {
                 NameCardDataSource.nameCardDataList[index] = updatedNameCardData
             }

@@ -1,15 +1,20 @@
 package io.name.card.aos.Management
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import io.name.card.aos.API.RetrofitClient
 import io.name.card.aos.R
 import io.name.card.aos.Data.NameCardData
 import io.name.card.aos.VerticalItemDecorator
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class NameCard_Management : Fragment() {
 
@@ -35,15 +40,30 @@ class NameCard_Management : Fragment() {
         nameCardRecyclerView.addItemDecoration(VerticalItemDecorator(10))
 
         // 더미 데이터 생성. API호출 시 삭제
-        nameCardData.add(NameCardData("김범진", "동아대학교", "학부생", "010-5410-1476", "1923673@donga.ac.kr", "부산광역시 사하구 낙동대로 550번길 37"))
-        nameCardData.add(NameCardData("김범진", "동아대학교", "학부생", "010-5410-1476", "1923673@donga.ac.kr", "부산광역시 사하구 낙동대로 550번길 37"))
-        nameCardData.add(NameCardData("김범진", "동아대학교", "학부생", "010-5410-1476", "1923673@donga.ac.kr", "부산광역시 사하구 낙동대로 550번길 37"))
-        nameCardData.add(NameCardData("김범진", "동아대학교", "학부생", "010-5410-1476", "1923673@donga.ac.kr", "부산광역시 사하구 낙동대로 550번길 37"))
-        nameCardData.add(NameCardData("김범진", "동아대학교", "학부생", "010-5410-1476", "1923673@donga.ac.kr", "부산광역시 사하구 낙동대로 550번길 37"))
-        nameCardData.add(NameCardData("김범진", "동아대학교", "학부생", "010-5410-1476", "1923673@donga.ac.kr", "부산광역시 사하구 낙동대로 550번길 37"))
-        nameCardData.add(NameCardData("김범진", "동아대학교", "학부생", "010-5410-1476", "1923673@donga.ac.kr", "부산광역시 사하구 낙동대로 550번길 37"))
-
-        nameCardManagementAdapter.setList(nameCardData)
+        getNameCardData()
     }
+
+    private fun getNameCardData() {
+        val call = RetrofitClient.apiService.getNameCardData()
+
+        call.enqueue(object : Callback<NameCardData> {
+            override fun onResponse(call: Call<NameCardData>, response: Response<NameCardData>) {
+                if (response.isSuccessful) {
+                    val nameCardResponse = response.body()
+                    nameCardResponse?.let {
+                        val list = mutableListOf(it)  // 단일 객체를 리스트로 변환
+                        activity?.runOnUiThread {
+                            nameCardManagementAdapter.setList(list)  // 어댑터 인스턴스를 사용
+                        }
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<NameCardData>, t: Throwable) {
+                Log.e("Debug", "API call failed with exception ", t)
+            }
+        })
+    }
+
 
 }

@@ -101,18 +101,18 @@
                     android:gravity="center"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="10dp"
-                    android:text="성함:"
+                    android:text="직장:"
                     android:textColor="@color/black"
                     android:textSize="30sp"/>
 
                 <TextView
-                    android:id="@+id/scanName_Tv"
+                    android:id="@+id/scanOffice_Tv"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:layout_marginRight="10dp"
-                    android:text="김범진"
+                    android:text="동아대학교"
                     android:textColor="@color/black"
                     android:textSize="30sp"/>
 
@@ -132,18 +132,18 @@
                     android:gravity="center"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="10dp"
-                    android:text="직장:"
+                    android:text="성함:"
                     android:textColor="@color/black"
                     android:textSize="30sp"/>
 
                 <TextView
-                    android:id="@+id/scanOffice_Tv"
+                    android:id="@+id/scanName_Tv"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:layout_marginRight="10dp"
-                    android:text="동아대학교"
+                    android:text="김범진"
                     android:textColor="@color/black"
                     android:textSize="30sp"/>
 
@@ -225,20 +225,20 @@
                     android:gravity="center"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="10dp"
-                    android:text="e-mail:"
+                    android:text="주소:"
                     android:textColor="@color/black"
                     android:textSize="30sp"/>
 
                 <TextView
-                    android:id="@+id/scanEmail_Tv"
+                    android:id="@+id/scanAddress_Tv"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:layout_marginRight="5dp"
-                    android:text="1923673@donga.ac.kr"
+                    android:text="부산광역시 사하구 낙동대로 550번길 37"
                     android:textColor="@color/black"
-                    android:textSize="20sp"/>
+                    android:textSize="17sp"/>
 
             </LinearLayout>
 
@@ -256,20 +256,20 @@
                     android:gravity="center"
                     android:layout_marginLeft="5dp"
                     android:layout_marginRight="10dp"
-                    android:text="주소:"
+                    android:text="e-mail:"
                     android:textColor="@color/black"
                     android:textSize="30sp"/>
 
                 <TextView
-                    android:id="@+id/scanAddress_Tv"
+                    android:id="@+id/scanEmail_Tv"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_gravity="center"
                     android:gravity="center"
                     android:layout_marginRight="5dp"
-                    android:text="부산광역시 사하구 낙동대로 550번길 37"
+                    android:text="1923673@donga.ac.kr"
                     android:textColor="@color/black"
-                    android:textSize="17sp"/>
+                    android:textSize="20sp"/>
 
             </LinearLayout>
 

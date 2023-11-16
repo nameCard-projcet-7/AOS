@@ -79,8 +79,8 @@
         app:layout_constraintStart_toEndOf="@id/nameCard_making_Et_email"
         app:layout_constraintEnd_toEndOf="@id/nameCard_making_image_choose" />
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraint"
         android:layout_width="400dp"
         android:layout_height="256dp"
         android:layout_marginTop="20dp"
@@ -93,7 +93,7 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent" />
 
-    </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/nameCard_making_Button"
@@ -105,7 +105,7 @@
         android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
-        app:layout_constraintTop_toBottomOf="@id/relativeLayout"
+        app:layout_constraintTop_toBottomOf="@id/constraint"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
